@@ -6,6 +6,29 @@
     <title>quantity</title>
 </head>
 <body>
-    
+   <div class="product-card">
+    <img src="./shoes.jpg" class="product-img">
+   
+    <br> <br>
+     <div class="btn">
+        <img src="decrement.png" class="btn-quantity" onclick="decrement()">
+        <span class="text" id="text">1</span>
+        <img src="increment.png" class="btn-quantity" onclick="increment()">
+   </div>
+   <button class="btn-buy-now">Buy Now</button>
+   </div>
+   <script>
+    function increment() {
+        const quantityElement = document.getElementById("text");
+        const quantity = parseInt(quantityElement.innerText);
+        quantityElement.innerText = quantity + 1;
+    }
+
+    function decrement() {
+        const quantityElement = document.getElementById("text");
+        const quantity = parseInt(quantityElement.innerText);
+        quantityElement.innerText = quantity - 1;
+    }
+
 </body>
 </html>
